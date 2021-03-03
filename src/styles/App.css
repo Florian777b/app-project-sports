@@ -1,0 +1,27 @@
+body {
+    color: red;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    background-image: url("../Images/1436808.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+nav {
+    background-color: brown;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+
+}
