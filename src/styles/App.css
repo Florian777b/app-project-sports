@@ -1,8 +1,8 @@
 body {
-    color: red;
+    color: whitesmoke;
     padding-top: 5%;
     padding-bottom: 20%;
-    background-image: url("../Images/1436808.jpg");
+    /* background-image: url("../Images/1436808.jpg"); */
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,7 +11,7 @@ body {
 
 
 nav {
-    background-color: brown;
+    background-color: green;
 }
 
 nav ul {
@@ -24,4 +24,14 @@ nav li {
     margin: 5px;
     padding: 10px;
 
+}
+
+.img-logo {
+    height: 50px;
+
+}
+
+.backgroundpic {
+    background-repeat: no-repeat;
+    background-size: cover;
 }

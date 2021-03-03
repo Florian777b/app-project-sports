@@ -10,10 +10,10 @@ export default function LoginPopup(){
                 (e) => {
                      e.preventDefault("")
                     
-                    propTypes.loginUser({Username:"Flo"})
+                    propTypes.loginUser({Username:""})
                 }
             }>
-                <label>Username:</label>
+                <label>Username</label>
                 <input type="text"></input>
             </form>
             
