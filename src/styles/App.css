@@ -1,7 +1,5 @@
 body {
-    color: whitesmoke;
-    padding-top: 5%;
-    padding-bottom: 20%;
+    color: #fc2803;
     /* background-image: url("../Images/1436808.jpg"); */
     background-color: #cccccc;
     background-repeat: no-repeat;
@@ -11,7 +9,7 @@ body {
 
 
 nav {
-    background-color: green;
+    background-color: #fc2803;
 }
 
 nav ul {
@@ -34,4 +32,33 @@ nav li {
 .backgroundpic {
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.team-cards {
+    display:flex;
+    flex-wrap: wrap;
+    margin:auto;
+    justify-content: center;
+    
+}
+.team {
+    margin:20px;
+    padding:30px;
+    background-color: rgb(221, 209, 209);
+    position: relative;
+    width: 200px;
+    border-radius: 20px;
+    
+}
+.team img {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+li {list-style:none ;
+
+}
+.team-container h1 {
+    margin:0 auto; 
+    text-align: center;
 }

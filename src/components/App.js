@@ -57,7 +57,7 @@ function App() {
       <nav className="nav nav-pills">
         <ul>
           <li>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/Teams">
               Teams
             </Link>
           </li>
@@ -84,28 +84,13 @@ function App() {
         </ul>
       </nav>
 
-      <ul>
-        {data &&
-          data.map((team, index) => {
-            return (
-              <li key={index}>
-                {team.Name} {team.City}{" "}
-                <img
-                  className="img-logo"
-                  src={team.WikipediaLogoUrl}
-                  alt="logo"
-                />{" "}
-                {team.Division}{" "}
-              </li>
-            );
-          })}
-      </ul>
+      
 
-      <Route path="/" exact>
+      <Route path="/Sponsors" >
         <Sponsors />
       </Route>
       <Route path="/Teams">
-        <Teams />
+        <Teams data={data}/>
       </Route>
     </div>
   );
