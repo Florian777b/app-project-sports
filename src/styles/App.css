@@ -1,15 +1,20 @@
+@font-face {
+    font-family:'Oswald' ;
+    src:local('Oswald'),url(../fonts/Oswald-VariableFont_wght.ttf)
+}
+
 body {
-    color: #fc2803;
+    color: #201e1e;
     /* background-image: url("../Images/1436808.jpg"); */
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f6f4f4;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 
 }
 
 
 nav {
-    background-color: #fc2803;
+    background-color: #219ef1;
 }
 
 nav ul {
@@ -61,4 +66,7 @@ li {list-style:none ;
 .team-container h1 {
     margin:0 auto; 
     text-align: center;
+}
+.spons-container {
+    -moz-text-decoration-style: dashed;
 }

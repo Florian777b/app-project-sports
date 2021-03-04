@@ -8,23 +8,6 @@ import LoginPopup from "./LoginPopup";
 function App() {
   const [loginPopupVisible, setLoginPopupVisible] = useState(false);
   const [user, setUser] = useState(null);
-  const [data, setData] = useState([]);
-
-  async function getScores() {
-    const access_key = "9651c1a2da7441a8ab810b656d815648";
-    const APIlink = `https://api.sportsdata.io/v3/nhl/scores/json/AllTeams`;
-    const response = await fetch(APIlink, {
-      headers: {
-        "Ocp-Apim-Subscription-Key": access_key,
-      },
-    });
-    const resData = await response.json();
-    setData(resData);
-  }
-  useEffect(() => {
-    getScores();
-  }, []);
-
   const [backgroundpic, setBackgroundpic] = useState({});
 
   async function getBackgroundpic() {
@@ -38,7 +21,6 @@ function App() {
   useEffect(() => {
     getBackgroundpic();
   }, []);
-  console.log(backgroundpic);
 
   let linktopicture;
   if (backgroundpic.urls) {
@@ -79,18 +61,15 @@ function App() {
             {loginPopupVisible && (
               <LoginPopup loginUser={setUser} closePopup={setUser} />
             )}
-            ;
           </li>
         </ul>
       </nav>
 
-      
-
-      <Route path="/Sponsors" >
+      <Route path="/Sponsors">
         <Sponsors />
       </Route>
       <Route path="/Teams">
-        <Teams data={data}/>
+        <Teams />
       </Route>
     </div>
   );
