@@ -1,3 +1,7 @@
+import DivisionCentral from './Divisioncentral'
+import DivisionWest from './Divisionwest'
+import divisionNorth from './Divisionnorth'
+import divisionEast from './Divisioneast'
 import "../styles/App.css";
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
