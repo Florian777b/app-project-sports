@@ -9,10 +9,31 @@ import Sponsors from "./Sponsors";
 import Teams from "./Teams";
 import LoginPopup from "./LoginPopup";
 
+export let LoginContext
+
 function App() {
   const [loginPopupVisible, setLoginPopupVisible] = useState(false);
   const [user, setUser] = useState(null);
   const [backgroundpic, setBackgroundpic] = useState({});
+
+  async function loginUser(userData) {
+    const res = await fetch("http://dummy.restapiexample.com/api/v1/create", {
+      method: "POST",
+      body: JSON.stringify(userData)
+    })
+    const data = await res.json()
+    if(data.status == "success"){
+      console.log("update user", data)
+      setUser(data)
+    }
+    setLoginPopupVisible(false)
+  }
+
+  useEffect(() => {
+    console.log("user", user)
+  }, [user])
+
+  LoginContext = React.createContext({loginUser})
 
   async function getBackgroundpic() {
     const access_key_unsplash = "fsVPtOvpYiuWJp6IpCC6lj8dVdZIK_wJO1ByH0J-alY";
@@ -58,12 +79,16 @@ function App() {
             </Link>
           </li>
           <li>
-            {user ? "🧔" : ""}
-            <button onClick={() => setLoginPopupVisible(!loginPopupVisible)}>
-              Login
-            </button>
+            {user ?
+              `🧔 ${user.name}`
+              : 
+              <button onClick={() => setLoginPopupVisible(!loginPopupVisible)}>
+                Login
+              </button>
+            }
+            
             {loginPopupVisible && (
-              <LoginPopup loginUser={setUser} closePopup={setUser} />
+              <LoginPopup />
             )}
           </li>
         </ul>
