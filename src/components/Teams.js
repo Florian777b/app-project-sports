@@ -9,7 +9,7 @@ function Teams() {
 
   return (
     
-    <div className="team-container">
+    <div className="team-container container">
       <h1>Teams Hockey </h1>
       <div className="team-cards">
 

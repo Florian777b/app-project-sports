@@ -8,6 +8,7 @@ import { Route, Link } from "react-router-dom";
 import Sponsors from "./Sponsors";
 import Teams from "./Teams";
 import LoginPopup from "./LoginPopup";
+import Contactus from "./Contactus"
 
 export let LoginContext
 
@@ -69,12 +70,12 @@ function App() {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/sponsors">
+            <Link className="nav-link" to="/Sponsors">
               Sponsors
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/contact us">
+            <Link className="nav-link" to="/Contactus">
               Contact us
             </Link>
           </li>
@@ -99,6 +100,9 @@ function App() {
       </Route>
       <Route path="/Teams">
         <Teams />
+      </Route>
+      <Route path="/Contactus">
+        <Contactus />
       </Route>
     </div>
   );

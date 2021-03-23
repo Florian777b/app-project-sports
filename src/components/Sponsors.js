@@ -1,9 +1,9 @@
 import React from 'react';
-
+import "../styles/Sponsors.css"
 
 function Sponsors() {
     return (
-        <>
+        <div className="container sponsor-container">
         <h1>Sponsors</h1>
         <h2>Plans for future</h2>
             <div className="spons-container">
@@ -12,7 +12,7 @@ function Sponsors() {
                 <li>Yearly bugdet</li>
             </div>
             
-        </>
+        </div>
     )
 }
 
